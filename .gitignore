@@ -1,0 +1,9 @@
+node_modules/*
+package-lock.json
+composer.lock
+composer.phar
+vendor/*
+.env
+test.js
+gitKey.pem
+gitKey.pem.pub

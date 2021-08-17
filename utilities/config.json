@@ -1,0 +1,9 @@
+{
+    "Database": {
+        "hostname": "127.0.0.1",
+        "username": "node",
+        "password": "Cy@1101942",
+        "database": "postCommentDB",
+        "port": "3306"
+    }
+}
