@@ -42,7 +42,8 @@ class UserController{
 
     renewToken(req,res){
         let userID = req.body.userID;
-        let string = userID+" "+Date.now;
+        let timeStamp = new Date();
+        let string = userID+" "+timeStamp;
         let token = crypto.createHash('sha256').update(string).digest('base64');
         UserModel.updateToken([token, userID], (result,error)=>{
             if(!error){
