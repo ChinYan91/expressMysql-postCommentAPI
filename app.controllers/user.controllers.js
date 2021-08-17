@@ -25,7 +25,8 @@ class UserController{
         UserModel.login(params, (result,error)=>{
             if(!error){
                 console.log("result => ",result)
-                let string = result[0].id+" "+Date.now;
+                let timeStamp = new Date();
+                let string = result[0].id+" "+timeStamp;
                 let userID = result[0].id;
                 let token = crypto.createHash('sha256').update(string).digest('base64');
                 UserModel.updateToken([token, userID], (result,error)=>{
